@@ -1419,11 +1419,29 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
+        "yaw": 1.689371,
+        "pitch": 0.137444,
+        "fov": 1.299127
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+      "yaw": 1.317593,
+      "pitch": 0.541237,
+      "rotation": 0,
+      "target": "32-f4"
+        },
+        {
+      "yaw": -0.182621,
+      "pitch": 0.661896,
+      "rotation": 0,
+      "target": "30-f2",
+          "view": {
+            "yaw": 2.196638,
+            "pitch": 0.165053,
+            "fov": 1.299127
+          }
+        }
+      ],
       "infoHotspots": []
     },
     {
@@ -1450,11 +1468,29 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
+        "yaw": -1.057003,
+        "pitch": 0.072583,
+        "fov": 1.299127
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+      "yaw": -1.004716,
+      "pitch": 0.487591,
+      "rotation": 0,
+      "target": "29-f3"
+        },
+        {
+      "yaw": 2.037037,
+      "pitch": 0.535043,
+      "rotation": 0,
+      "target": "31-f1",
+          "view": {
+            "yaw": 2.983175,
+            "pitch": 0.054575,
+            "fov": 1.299127
+          }
+}
+      ],
       "infoHotspots": []
     },
     {
@@ -1485,7 +1521,20 @@ var APP_DATA = {
         "yaw": 0,
         "fov": 1.5707963267948966
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+      "yaw": 3.095878,
+      "pitch": 0.464391,
+      "rotation": 0,
+      "target": "0-a1"
+        },
+        {
+        "yaw": -0.045045,
+        "pitch": 0.475841,
+        "rotation": 0,
+        "target": "30-f2"
+}
+      ],
       "infoHotspots": []
     },
     {
@@ -1512,11 +1561,23 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
+        "yaw": -0.093589,
+        "pitch": 0.25808,
+        "fov": 1.299127
       },
-      "linkHotspots": [],
+      "linkHotspots": [
+        {
+      "yaw": -1.64545,
+      "pitch": 0.576425,
+      "rotation": 0,
+      "target": "29-f3",
+          "view": {
+            "yaw": 0.034761,
+            "pitch": 0.175281,
+            "fov": 1.299127
+          }
+        }
+      ],
       "infoHotspots": []
     },
     {
