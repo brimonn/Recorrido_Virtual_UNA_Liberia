@@ -1,6 +1,8 @@
 var APP_DATA = {
   "scenes": [
-    {
+    //  =================================================== SECCIÓN A ===================================================
+    // ==== A1 ====
+    { 
       "id": "0-a1",
       "name": "A1",
       "levels": [
@@ -24,21 +26,21 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": 0.03236792430970148,
-        "pitch": -0.03455139231557425,
-        "fov": 1.3483902604801417
+        "yaw": 0.009386,
+        "pitch": -0.018635,
+        "fov": 1.357325
       },
       "linkHotspots": [
         { //Direccion pasillo principal
-          "yaw": -0.384909,
-          "pitch": 0.418138,
-          "rotation": 0.30,
+          "yaw": 0.045843,
+          "pitch": 0.401978,
+          "rotation": 0,
           "target": "1-a2"
         },
         {//Direccion parqueo
-        "yaw": 1.511917,
-        "pitch": 0.720021,
-        "rotation": 0,
+        "yaw": 2.542442,
+        "pitch": 0.607866,
+        "rotation": -0.15,
         "target": "31-f1"
         }
       ],
@@ -46,6 +48,7 @@ var APP_DATA = {
        
       ]
     },
+    // ==== A2 ====
     {
       "id": "1-a2",
       "name": "A2",
@@ -70,27 +73,32 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": -0.24180743454903642,
-        "pitch": -0.10099637753783419,
-        "fov": 1.3483902604801417
+        "yaw": -0.687978,
+        "pitch": -0.059789,
+        "fov": 1.299127
       },
       "linkHotspots": [
         {
-          "yaw": -0.222731,
-          "pitch": 0.390163,
+          "yaw": -0.615129,
+          "pitch": 0.362293,
           "rotation": 0,
           "target": "2-a3"
         },
         {
-          "yaw": 2.922585,
-          "pitch": 0.363114,
+          "yaw": 2.473183,
+          "pitch": 0.439505,
           "rotation": 0,
           "target": "0-a1",
-          "view": {"yaw": 1.567694, "pitch": 0.256466, "fov": 1.299127}
+          "view": {
+            "yaw": -3.100776,
+            "pitch": 0.195191,
+            "fov": 1.299127
+          }
         }
       ],
       "infoHotspots": []
     },
+    // ==== A3 ====
     {
       "id": "2-a3",
       "name": "A3",
@@ -115,27 +123,32 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": -0.12851969946505193,
-        "pitch": -0.06511608551781123,
-        "fov": 1.3483902604801417
+        "yaw": -2.429652,
+        "pitch": 0.135947,
+        "fov": 1.299127
       },
       "linkHotspots": [
         {
-          "yaw": -0.162367,
-          "pitch": 0.503316,
+          "yaw": -2.317434,
+          "pitch": 0.530561,
           "rotation": 0,
           "target": "3-a4"
         },
         {
-          "yaw": 2.911528,
-          "pitch": 0.416377,
+          "yaw": 0.737917,
+          "pitch": 0.399998,
           "rotation": 0,
           "target": "1-a2",
-          "view": { "yaw": 3.02039, "pitch": -0.210118, "fov": 1.299127 }
+          "view":  {
+            "yaw": 2.589722,
+            "pitch": 0.031893,
+            "fov": 1.299127
+          }
         }
       ],
       "infoHotspots": []
     },
+    // ==== A4 ====
     {
       "id": "3-a4",
       "name": "A4",
@@ -160,33 +173,37 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": -0.07044783526232834,
-        "pitch": -0.1435410988518946,
-        "fov": 1.3483902604801417
+        "yaw": -1.775336,
+        "pitch": 0.033028,
+        "fov": 1.299127
       },
       "linkHotspots": [
         {
-          "yaw": 1.450429,
-          "pitch": 0.485285,
+          "yaw": -0.149256,
+          "pitch": 0.423771,
           "rotation": 0,
-          "target": "17-b1"
+          "target": "37-b1"
         },
         {
-          "yaw": -1.612698,
-          "pitch": 0.552327,
+          "yaw": 3.014524,
+          "pitch": 0.455652,
           "rotation": 0,
           "target": "13-e1"
         },
         {
-          "yaw": 3.053787,
-          "pitch": 0.52633,
+          "yaw": 1.425499,
+          "pitch": 0.591293,
           "rotation": 0,
           "target": "2-a3",
-          "view": {"yaw": 3.012893,"pitch": -0.112575,"fov": 1.299127} 
+          "view": {
+            "yaw": 0.793819,
+            "pitch": -0.043289,
+            "fov": 1.299127
+          }
         },
         {
-          "yaw": -0.081696,
-          "pitch": 0.353864,
+          "yaw": -1.696874,
+          "pitch": 0.47562,
           "rotation": 0,
           "target": "4-a5"
         }
@@ -195,6 +212,7 @@ var APP_DATA = {
         
       ]
     },
+    // ==== A5 ====
     {
       "id": "4-a5",
       "name": "A5",
@@ -235,11 +253,16 @@ var APP_DATA = {
           "pitch": 0.473185,
           "rotation": 0,
           "target": "3-a4",
-          "view": {"yaw": 3.060289,"pitch": 0.045925,"fov": 1.299127}
+          "view": {
+            "yaw": 1.445156,
+            "pitch": 0.008436,
+            "fov": 1.299127
+}
         }
       ],
       "infoHotspots": []
     },
+    // ==== A6 ====
     {
       "id": "5-a6",
       "name": "A6",
@@ -281,10 +304,56 @@ var APP_DATA = {
           "rotation": 0,
           "target": "4-a5",
           "view": {"yaw": 0.391369,"pitch": -0.024841,"fov": 1.299127}
+        },
+        {
+          "yaw": -1.401779,
+          "pitch": 0.4609,
+          "rotation": 0,
+          "target": "44-lab12"
+        },
+      ],
+      "infoHotspots": []
+    },
+    // ==== LAB 12 ====
+    {
+      "id": "44-lab12",
+      "name": "Laboratorio #12",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 2.833409,
+        "pitch": 0.026223,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 2.82827,
+          "pitch": 0.480356,
+          "rotation": 0,
+          "target": "5-a6"
         }
       ],
       "infoHotspots": []
     },
+    // ==== A7 ====
     {
       "id": "6-a7",
       "name": "A7",
@@ -330,6 +399,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A8 ====
     {
       "id": "7-a8",
       "name": "A8",
@@ -381,6 +451,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A9 ====
     {
       "id": "8-a9",
       "name": "A9",
@@ -430,6 +501,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A10 ====
     {
       "id": "9-a10",
       "name": "A10",
@@ -479,6 +551,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A11 ====
     {
       "id": "10-a11",
       "name": "A11",
@@ -528,6 +601,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A12 ====
     {
       "id": "11-a12",
       "name": "A12",
@@ -577,6 +651,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== A13 ====
     {
       "id": "12-a13",
       "name": "A13",
@@ -627,6 +702,8 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    //  =================================================== SECCIÓN E ===================================================
+    // ==== E1 ====
     {
       "id": "13-e1",
       "name": "E1",
@@ -671,6 +748,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== E2 ====
     {
       "id": "14-e2",
       "name": "E2",
@@ -720,6 +798,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== E3 ====
     {
       "id": "15-e3",
       "name": "E3",
@@ -774,6 +853,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== E4 ====
     {
       "id": "16-e4",
       "name": "E4",
@@ -823,8 +903,10 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    //  =================================================== SECCIÓN B ===================================================
+    // ==== B1 ====
     {
-      "id": "17-b1",
+      "id": "37-b1",
       "name": "B1",
       "levels": [
         {
@@ -847,26 +929,127 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": 3.0130666798401773,
-        "pitch": 0.0364205451698858,
-        "fov": 1.3483902604801417
+        "yaw": -2.518088,
+        "pitch": -0.025129,
+        "fov": 1.299127
       },
       "linkHotspots": [
         {
-          "yaw": -0.130941,
-          "pitch": 0.337414,
+          "yaw": 0.532954,
+          "pitch": 0.378839,
           "rotation": 0,
           "target": "3-a4"
         },
         {
-          "yaw": 2.988473,
-          "pitch": 0.528594,
+          "yaw": -2.605657,
+          "pitch": 0.396464,
+          "rotation": 0,
+          "target": "38-bb1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== B1.2 ====
+    {
+      "id": "38-bb1",
+      "name": "B1.2",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -1.830666,
+        "pitch": 0.054954,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.356553,
+          "pitch": 0.454394,
+          "rotation": 0,
+          "target": "37-b1",
+          "view": {
+            "yaw": 0.570668,
+            "pitch": -0.057278,
+            "fov": 1.299127
+          }
+        },
+        {
+          "yaw": -1.755178,
+          "pitch": 0.497605,
+          "rotation": 0,
+          "target": "39-bbb1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== B1.3 ====
+    {
+      "id": "39-bbb1",
+      "name": "B1.3",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -1.835711,
+        "pitch": 0.166946,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.299905,
+          "pitch": 0.548925,
+          "rotation": 0,
+          "target": "38-bb1",
+          "view": {
+            "yaw": 1.405374,
+            "pitch": 0.005648,
+            "fov": 1.299127
+          }
+        },
+        {
+          "yaw": -1.763049,
+          "pitch": 0.615734,
           "rotation": 0,
           "target": "18-b2"
         }
       ],
       "infoHotspots": []
     },
+    // ==== B2 ====
     {
       "id": "18-b2",
       "name": "B2",
@@ -897,14 +1080,14 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 3.056064,
-          "pitch": 0.496186,
+          "yaw": 3.057404,
+          "pitch": 0.4898,
           "rotation": 0,
-          "target": "17-b1",
+          "target": "39-bbb1",
           "view": {
-            "yaw": -0.275193,
-            "pitch": -0.127438,
-            "fov": 1.34839
+            "yaw": 1.540644,
+            "pitch": 0.160359,
+            "fov": 1.299127
           }
         },
         {
@@ -916,6 +1099,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== B3 ====
     {
       "id": "19-b3",
       "name": "B3",
@@ -960,6 +1144,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== B4 ====
     {
       "id": "20-b4",
       "name": "B4",
@@ -1009,6 +1194,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== B5 ====
     {
       "id": "21-b5",
       "name": "B5",
@@ -1058,6 +1244,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== B6 ====
     {
       "id": "22-b6",
       "name": "B6",
@@ -1082,9 +1269,9 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": -0.170175229004478,
-        "pitch": -0.1808912058233041,
-        "fov": 1.3483902604801417
+        "yaw": -0.087381,
+        "pitch": -0.037749,
+        "fov": 1.299127
       },
       "linkHotspots": [
         {
@@ -1097,10 +1284,227 @@ var APP_DATA = {
             "pitch": -0.080844,
             "fov": 1.34839
           }
+        },
+         {
+          "yaw": -0.095035,
+          "pitch": 0.468314,
+          "rotation": 0,
+          "target": "40-bp"
         }
       ],
       "infoHotspots": []
     },
+    //  =================================================== BIBLIOTECA ===================================================
+    // ==== BIBLIOTECA PRINCIPAL ====
+    {
+      "id": "40-bp",
+      "name": "B7",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 0.479217,
+        "pitch": 0.012689,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.75124,
+          "pitch": 0.465383,
+          "rotation": 0,
+          "target": "41-sle1",
+          "view": {
+            "yaw": 0.261316,
+            "pitch": -0.080844,
+            "fov": 1.34839
+          }
+        },
+        {
+          "yaw": 1.449746,
+          "pitch": 0.492541,
+          "rotation": 0,
+          "target": "43-bext2"
+        },
+        {
+          "yaw": -0.663748,
+          "pitch": 0.406905,
+          "rotation": 0,
+          "target": "42-bext1"
+        },
+        {
+          "yaw": -2.606107,
+          "pitch": 0.552067,
+          "rotation": 0,
+          "target": "22-b6",
+          "view": {
+            "yaw": 3.002739,
+            "pitch": -0.003887,
+            "fov": 1.299127
+          }
+        }
+      ],
+      "infoHotspots": [
+        {
+          "yaw": 0.438759,
+          "pitch": -0.176344,
+          "title": "Biblioteca Rose Marie Ruiz",
+          "text": "Horario de atención: <br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "anjdnajn@gmail.com<br>"
+          + "+506 7777-7777"
+        }
+      ]
+    },
+    // ==== Sala de estudio 1 ====
+    {
+      "id": "41-sle1",
+      "name": "Sala de Estudio 1",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 0.479217,
+        "pitch": 0.012689,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -3.040688,
+          "pitch": 0.678683,
+          "rotation": 0,
+          "target": "40-bp"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== Patio Biblioteca 1 ====
+    {
+      "id": "42-bext1",
+      "name": "Patio biblioteca",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 3.085328,
+        "pitch": 0.154873,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -3.040688,
+          "pitch": 0.678683,
+          "rotation": 0,
+          "target": "43-bext2"
+        },
+        {
+            "yaw": -1.028844,
+            "pitch": 0.707116,
+            "rotation": 0,
+            "target": "40-bp"
+        }
+      ],
+      "infoHotspots": []
+    },
+     // ==== Patio Biblioteca 2 (Derecha)====
+    {
+      "id": "43-bext2",
+      "name": "Patio biblioteca",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 1.929925,
+        "pitch": 0.046752,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.854742,
+          "pitch": 0.495602,
+          "rotation": 0,
+          "target": "42-bext1"
+        },
+        {
+          "yaw": -0.693955,
+          "pitch": 0.501284,
+          "rotation": 0,
+          "target": "40-bp"
+        }
+      ],
+      "infoHotspots": []
+    },
+    //  =================================================== SECCIÓN C ===================================================
+    // ==== C1 ====
     {
       "id": "23-c1",
       "name": "C1",
@@ -1156,6 +1560,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    // ==== C2 ====
     {
       "id": "24-c2",
       "name": "C2",
@@ -1248,6 +1653,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    //  D  _____________________________________________________________________________________________________
     {
       "id": "26-d1",
       "name": "D1",
@@ -1395,6 +1801,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    //  F  _____________________________________________________________________________________________________________
     {
       "id": "29-f3",
       "name": "F3",
@@ -1580,6 +1987,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
+    //  G  ___________________________________________________________________________________________________________________
     {
       "id": "33-g1",
       "name": "G1",
