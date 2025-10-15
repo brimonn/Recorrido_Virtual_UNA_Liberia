@@ -485,5 +485,32 @@ window.dumpView = function () {
   }
 };
 
+//=================================================================
+
+(function setupAbout() {
+  const aboutBtn = document.getElementById('aboutToggle');
+  const aboutPanel = document.getElementById('aboutPanel');
+  if (!aboutBtn || !aboutPanel) return;
+
+  const toggle = (e) => {
+    e.stopPropagation();
+    aboutPanel.classList.toggle('visible');
+    aboutPanel.setAttribute('aria-hidden', aboutPanel.classList.contains('visible') ? 'false' : 'true');
+  };
+
+  aboutBtn.addEventListener('click', toggle);
+
+  // Cerrar al hacer click fuera
+  document.addEventListener('click', (e) => {
+    if (!aboutPanel.classList.contains('visible')) return;
+    const inside = aboutPanel.contains(e.target) || aboutBtn.contains(e.target);
+    if (!inside) aboutPanel.classList.remove('visible');
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') aboutPanel.classList.remove('visible');
+  });
+})();
 
 })();
