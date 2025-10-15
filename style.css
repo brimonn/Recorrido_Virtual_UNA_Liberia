@@ -75,13 +75,13 @@ body.multiple-scenes.mobile #titleBar {
 }
 
 #titleBar .sceneName {
+  position: static;
   width: 100%;
   height: 100%;
   line-height: 30px;
   padding: 5px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
-  overflow: hidden;
+  background-color: #bf0930a6;
+  background-color: #bf0930a6;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -153,8 +153,8 @@ body.fullscreen-enabled #fullscreenToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: #bf0930a6;
+  background-color: #bf0930a6;
 }
 
 .mobile #autorotateToggle {
@@ -207,8 +207,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 40px;
   height: 40px;
   padding: 5px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: #bf0930a6;
+  background-color: #bf0930a6;
 }
 
 .mobile #sceneListToggle {
@@ -273,8 +273,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 #sceneList .scenes {
   width: 100%;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
+  background-color: #A31D1D;
+  background-color: #a31d1dad;
 }
 
 .mobile #sceneList {
@@ -320,13 +320,13 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 }
 
 .no-touch #sceneList .scene:hover {
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: #bf0930a6;
+  background-color: #bf0930a6;
 }
 
 #sceneList .scene.current {
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: #8E1616;
+  background-color: #8E1616;
 }
 
 /* Hide scene list when only a single scene exists */
@@ -453,7 +453,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: rgb(103,115,131);
+  background-color: #bd2020;
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
                       border-radius 0.3s ease-in-out 0.5s;
@@ -553,7 +553,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: 40px;
   width: 40px;
   border-top-right-radius: 5px;
-  background-color: rgb(78,88,104);
+  background-color: #8E1616;
   visibility: hidden;
   -ms-transform: perspective(200px) rotateY(90deg);
   -webkit-transform: perspective(200px) rotateY(90deg);
@@ -600,7 +600,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   top: 40px;
   left: 0;
   padding: 10px;
-  background-color: rgb(58,68,84);
+  background-color: #A31D1D;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   overflow-y: auto;
@@ -828,3 +828,63 @@ body.view-control-buttons .viewControlButton {
 .viewControlButton-6 {
   margin-left: 105px;
 }
+
+
+#brandBar {
+  position: absolute;
+  z-index: 10000;
+  top: 0; left: 0; right: 0;
+  height: 36px;
+  background: #BF092F;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center;
+}
+#brandBar .brand-wrap { width: 100%; padding: 0 12px; display: flex; gap: 10px; align-items: center; }
+#brandBar .brand-title { font-weight: 600; letter-spacing: .3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+
+#titleBar { top: 36px; }
+.mobile #titleBar { top: 36px; }
+
+#sceneList { padding-top: calc(40px + 36px); }
+.mobile #sceneList { padding-top: calc(50px + 36px); }
+
+#fullscreenToggle,
+#autorotateToggle,
+#sceneListToggle { top: 36px; }
+
+/* ===== Botón Info ===== */
+#aboutToggle {
+  position: absolute;
+  top: 36px;
+  right: 0px;           
+  width: 40px; height: 40px; padding: 5px;
+  background-color: #BF092F;
+  z-index: 10001;
+}
+body.fullscreen-enabled #aboutToggle { right: 80px; }   
+.mobile #aboutToggle { width: 50px; height: 50px; right: 50px; }
+#aboutToggle .icon { position: absolute; top: 5px; right: 5px; width: 30px; height: 30px; }
+.mobile #aboutToggle .icon { top: 10px; right: 10px; }
+
+/* ===== Panel Info ===== */
+#aboutPanel {
+  position: absolute;
+  top: 76px;            
+  right: 10px;
+  width: 280px;
+  background: #BF092F;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  padding: 10px 12px;
+  z-index: 12000;
+  opacity: 0; pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+#aboutPanel .about-title { font-weight: 700; margin-bottom: 6px; }
+#aboutPanel .about-body { font-size: 14px; line-height: 1.35; }
+#aboutPanel.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+#autorotateToggle { display: none !important; }
+
+
