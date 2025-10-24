@@ -346,16 +346,30 @@
     stopTouchAndScrollEventPropagation(wrapper);
 
     // Create tooltip element.
-    var tooltip = document.createElement('div');
+    /*var tooltip = document.createElement('div');
     tooltip.classList.add('hotspot-tooltip');
     tooltip.classList.add('link-hotspot-tooltip');
-    tooltip.innerHTML = findSceneDataById(hotspot.target).name;
+    tooltip.innerHTML = hotspot.name || findSceneDataById(hotspot.target).name;
 
     wrapper.appendChild(icon);
     wrapper.appendChild(tooltip);
 
     return wrapper;
+  }*/
+
+   if (hotspot.name && hotspot.name.trim() !== "") {
+    var tooltip = document.createElement('div');
+    tooltip.classList.add('hotspot-tooltip');
+    tooltip.classList.add('link-hotspot-tooltip');
+    tooltip.innerHTML = hotspot.name;
+    wrapper.appendChild(tooltip);
   }
+
+  // Append icon al final
+  wrapper.appendChild(icon);
+
+  return wrapper;
+}
 
   function createInfoHotspotElement(hotspot) {
 

@@ -311,6 +311,12 @@ var APP_DATA = {
           "rotation": 0,
           "target": "44-lab12"
         },
+        {
+          "yaw": -1.733989,
+          "pitch": 0.457628,
+          "rotation": 0,
+          "target": "46-lab13"
+        }
       ],
       "infoHotspots": []
     },
@@ -347,6 +353,45 @@ var APP_DATA = {
         {
           "yaw": 2.82827,
           "pitch": 0.480356,
+          "rotation": 0,
+          "target": "5-a6"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== LAB 13 ====
+    {
+      "id": "46-lab13",
+      "name": "Laboratorio #13",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -0.107312,
+        "pitch": 0.091288,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.104645,
+          "pitch": 0.549512,
           "rotation": 0,
           "target": "5-a6"
         }
@@ -395,6 +440,97 @@ var APP_DATA = {
           "rotation": 0,
           "target": "5-a6",
           "view": {"yaw": -0.013931,"pitch": -0.07375,"fov": 1.299127}
+        },
+        {
+          "yaw": -2.97742,
+          "pitch": 0.468558,
+          "rotation": 0,
+          "target": "47-labingles"
+        }
+        ,
+        {
+          "yaw": 0.158186,
+          "pitch": 0.396846,
+          "rotation": 0,
+          "target": "45-labfisica"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== LAB IDIOMAS ====
+    {
+      "id": "47-labingles",
+      "name": "Laboratorio idiomas",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 0.133049,
+        "pitch": 0.168578,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 0.085369,
+          "pitch": 0.624223,
+          "rotation": 0,
+          "target": "6-a7"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== LAB FISICA ====
+    {
+      "id": "45-labfisica",
+      "name": "Laboratorio de física",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -1.75035,
+        "pitch": 0.106722,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -1.793731,
+          "pitch": 0.616138,
+          "rotation": 0,
+          "target": "6-a7"
         }
       ],
       "infoHotspots": []
@@ -856,7 +992,7 @@ var APP_DATA = {
     // ==== E4 ====
     {
       "id": "16-e4",
-      "name": "E4",
+      "name": "Soda",
       "levels": [
         {
           "tileSize": 256,
@@ -1450,10 +1586,55 @@ var APP_DATA = {
           "target": "43-bext2"
         },
         {
-            "yaw": -1.028844,
-            "pitch": 0.707116,
+            "yaw": -1.17249,
+            "pitch": 0.520001,
             "rotation": 0,
             "target": "40-bp"
+        },
+        {
+            "yaw": -0.861295,
+            "pitch": 0.515432,
+            "rotation": 0,
+            "target": "52-saladecanos"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ========== SALA EX-DECANOS ==========
+    {
+      "id": "52-saladecanos",
+      "name": "Sala ex decanos",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 0.451779,
+        "pitch": 0.033567,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.541079,
+          "pitch": 0.420449,
+          "rotation": 0,
+          "target": "42-bext1"
         }
       ],
       "infoHotspots": []
@@ -1495,10 +1676,150 @@ var APP_DATA = {
           "target": "42-bext1"
         },
         {
-          "yaw": -0.693955,
-          "pitch": 0.501284,
+          "yaw": -0.520925,
+          "pitch": 0.405257,
           "rotation": 0,
           "target": "40-bp"
+        },
+        {
+          "yaw": -0.799196,
+          "pitch": 0.387302,
+          "rotation": 0,
+          "target": "53-libros1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ==== SECCIÓN DE LIBROS ====
+    // ========== 1 ==========
+    {
+      "id": "53-libros1",
+      "name": "Seccion libros 1",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 3.098547,
+        "pitch": 0.222792,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 3.014506,
+          "pitch": 0.654539,
+          "rotation": 0,
+          "target": "54-libros2"
+        },
+        {
+          "yaw": 1.024179,
+          "pitch": 0.48966,
+          "rotation": 0,
+          "target": "43-bext2"
+        }
+      ],
+      "infoHotspots": [
+
+      ]
+    },
+    // ========== 2 ==========
+    {
+      "id": "54-libros2",
+      "name": "Seccion libros 2",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -0.126987,
+        "pitch": 0.018966,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 3.053168,
+          "pitch": 0.609732,
+          "rotation": 0,
+          "target": "53-libros1",
+          "view": {"yaw": 1.130469,"pitch": 0.107647,"fov": 1.299127}
+        },
+        {
+          "yaw": -0.111617,
+          "pitch": 0.501323,
+          "rotation": 0,
+          "target": "55-libros3"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // ========== 3 ==========
+    {
+      "id": "55-libros3",
+      "name": "Seccion libros 3",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 2.598414,
+        "pitch": 0.055427,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.582241,
+          "pitch": 0.48044,
+          "rotation": 0,
+          "target": "54-libros2",
+          "view": {"yaw": 3.043579,"pitch": 0.056997,"fov": 1.299127}
         }
       ],
       "infoHotspots": []
@@ -1987,7 +2308,7 @@ var APP_DATA = {
       ],
       "infoHotspots": []
     },
-    //  G  ___________________________________________________________________________________________________________________
+    //  =================================== SECCIÓN G ===================================
     {
       "id": "33-g1",
       "name": "G1",
@@ -2165,16 +2486,196 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 1.76583,
-          "pitch": 0.440324,
+          "yaw": 2.168985,
+          "pitch": 0.396179,
           "rotation": 0,
-          "target": "16-e4"
+          "target": "16-e4",
+          "name": "Soda"
         },
         {
           "yaw": 0.071737,
           "pitch": 0.322952,
           "rotation": -0.10,
-          "target": "35-g3"
+          "target": "35-g3",
+          "name": " avanzar"
+        },
+        {
+          "yaw": 1.323503,
+          "pitch": 0.410157,
+          "rotation": 0,
+          "target": "48-labizquierda"
+        },
+        {
+          "yaw": 1.772689,
+          "pitch": 0.440697,
+          "rotation": 0,
+          "target": "49-labderecha1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    // =================== LABORATORIOS ===================
+    {
+      "id": "48-labizquierda",
+      "name": "Laboratorio de Biología y Microbiología",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 2.329096,
+        "pitch": 0.148139,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 1.754357,
+          "pitch": 0.566329,
+          "rotation": 0.30,
+          "target": "36-g4",
+          "name": "Salir"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "49-labderecha1",
+      "name": "Laboratorio de Química",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 2.8637,
+        "pitch": 0.329017,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -2.588633,
+          "pitch": 0.64756,
+          "rotation": 0.99,
+          "target": "50-labderecha2"
+        },
+        {
+          "yaw": 0.177968,
+          "pitch": 0.701005,
+          "rotation": -0.10,
+          "target": "36-g4"
+        },
+        {
+          "yaw": 2.136001,
+          "pitch": 0.652928,
+          "rotation": -0.30,
+          "target": "51-labderecha3"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "50-labderecha2",
+      "name": "Laboratorio Derecha 2",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": 0.442624,
+        "pitch": 0.169879,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": 2.158491,
+          "pitch": 0.725312,
+          "rotation": 0,
+          "target": "49-labderecha1"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "51-labderecha3",
+      "name": "Laboratorio Derecha 3",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        }
+      ],
+      "faceSize": 1488,
+      "initialViewParameters": {
+        "yaw": -1.860541,
+        "pitch": 0.360338,
+        "fov": 1.299127
+      },
+      "linkHotspots": [
+        {
+          "yaw": -1.059901,
+          "pitch": 0.643585,
+          "rotation": 0.10,
+          "target": "49-labderecha1"
         }
       ],
       "infoHotspots": []
