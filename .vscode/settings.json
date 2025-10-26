@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "virtual-tour"
+    "liveServer.settings.multiRootWorkspaceName": "virtual-tour",
+    "liveServer.settings.port": 5501
 }

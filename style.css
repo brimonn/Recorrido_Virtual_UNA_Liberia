@@ -267,6 +267,32 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   transition: margin-left 0.5s ease-in-out;
 }
 
+/* ====== SCROLLBAR PERSONALIZADO ====== */
+#sceneList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#sceneList::-webkit-scrollbar-track {
+  background: #8E1616; /* Fondo del scroll en rojo oscuro */
+  border-radius: 4px;
+}
+
+#sceneList::-webkit-scrollbar-thumb {
+  background: #BF092F; /* Barra del scroll en rojo principal */
+  border-radius: 4px;
+  border: 1px solid #8E1616;
+}
+
+#sceneList::-webkit-scrollbar-thumb:hover {
+  background: #A31D1D; /* Rojo más oscuro al hacer hover */
+}
+
+/* Para Firefox */
+#sceneList {
+  scrollbar-width: thin;
+  scrollbar-color: #BF092F #8E1616;
+}
+
 .mobile #sceneList {
   padding-top: 50px;
 }
@@ -281,6 +307,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 100%;
   height: 100%;
   left: -100%;
+  background-color: #A31D1D; /* Asegurar fondo rojo en móvil */
 }
 
 .mobile #sceneList.enabled {
@@ -289,6 +316,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 .mobile #sceneList .scenes {
   height: 100%;
+  background-color: #A31D1D !important; /* Fondo rojo sólido */
+  min-height: 100vh; /* Asegurar que cubra toda la altura */
 }
 
 #sceneList.enabled {
@@ -303,6 +332,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 .mobile #sceneList .scene {
   height: 40px;
+  background-color: #A31D1D; /* Fondo rojo para cada elemento */
 }
 
 #sceneList .scene .text {
@@ -437,6 +467,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   opacity: 0.9;
   -webkit-transition: opacity 0.2s 0.2s;
   transition: opacity 0.2s 0.2s;
+  /* Asegurar que los hotspots colapsados también estén por encima */
+  z-index: 10000;
 }
 
 .no-touch .info-hotspot:hover {
@@ -447,6 +479,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 .info-hotspot.visible {
   opacity: 1;
+  /* Asegurar que el hotspot desplegado esté por encima de otros */
+  position: relative;
+  z-index: 10001;
 }
 
 .info-hotspot .info-hotspot-header {
@@ -459,6 +494,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
                       border-radius 0.3s ease-in-out 0.5s;
   transition: width 0.3s ease-in-out 0.5s,
               border-radius 0.3s ease-in-out 0.5s;
+  /* Asegurar que el header esté por encima */
+  z-index: 10001;
 }
 
 .mobile .info-hotspot .info-hotspot-header {
@@ -598,6 +635,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   height: auto;
   max-height: 200px;
   top: 40px;
+  overflow-y: auto;
   left: 0;
   padding: 10px;
   background-color: #A31D1D;
@@ -651,7 +689,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot-modal {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -673,6 +711,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
                       visibility 0s 0s;
   transition: opacity 0.2s ease-in-out,
               visibility 0s 0s;
+  /* Asegurar que el modal esté por encima de todo */
+  z-index: 10002;
 }
 
 .info-hotspot-modal .info-hotspot-header {
@@ -682,8 +722,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 10px;
   width: auto;
   height: 50px;
-  background-color: rgb(103,115,131);
-  background-color: rgba(103,115,131,0.8);
+  background-color: #BF092F;
+  background-color: #BF092F;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out 0.2s;
   transition: opacity 0.3s ease-in-out 0.2s;
@@ -739,8 +779,8 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   right: 0;
   width: 50px;
   height: 50px;
-  background-color: rgb(78,88,104);
-  background-color: rgba(78,88,104,0.8);
+  background-color: #8E1616;
+  background-color: #8E1616;
   cursor: pointer;
 }
 
@@ -756,13 +796,15 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   bottom: 10px;
   left: 10px;
   right: 10px;
-  padding: 10px;
-  background-color: rgb(58,68,84);
-  background-color: rgba(58,68,84,0.8);
   overflow-y: auto;
+  padding: 10px;
+  background-color: #A31D1D;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
 
   -moz-user-select: text;
   -webkit-user-select: text;
@@ -774,6 +816,104 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out 0.4s;
   transition: opacity 0.3s ease-in-out 0.4s;
+}
+
+/* ====== SCROLL PERSONALIZADO PARA HOTSPOTS ====== */
+.info-hotspot-text::-webkit-scrollbar,
+.info-hotspot-modal .info-hotspot-text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.info-hotspot-text::-webkit-scrollbar-track,
+.info-hotspot-modal .info-hotspot-text::-webkit-scrollbar-track {
+  background: #8E1616;
+  border-radius: 4px;
+}
+
+.info-hotspot-text::-webkit-scrollbar-thumb,
+.info-hotspot-modal .info-hotspot-text::-webkit-scrollbar-thumb {
+  background: #BF092F;
+  border-radius: 4px;
+  border: 1px solid #8E1616;
+}
+
+.info-hotspot-text::-webkit-scrollbar-thumb:hover,
+.info-hotspot-modal .info-hotspot-text::-webkit-scrollbar-thumb:hover {
+  background: #A31D1D;
+}
+
+/* Para Firefox */
+.info-hotspot-text,
+.info-hotspot-modal .info-hotspot-text {
+  scrollbar-width: thin;
+  scrollbar-color: #BF092F #8E1616;
+}
+
+/* ====== ENLACES EN HOTSPOTS ====== */
+.info-hotspot-text a,
+.info-hotspot-modal .info-hotspot-text a,
+.clickable-link {
+  color: #fff !important;
+  text-decoration: underline !important;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  /* Asegurar que los enlaces sean clicables */
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+.info-hotspot-text a:hover,
+.info-hotspot-modal .info-hotspot-text a:hover,
+.clickable-link:hover {
+  color: #ffcccb !important; /* Rojo claro al hacer hover */
+  text-decoration: underline !important;
+}
+
+/* Enlaces externos (con target="_blank") */
+.info-hotspot-text a[target="_blank"],
+.info-hotspot-modal .info-hotspot-text a[target="_blank"],
+.clickable-link[target="_blank"] {
+  color: #fff !important; /* Blanco como el resto del texto */
+  font-weight: 600;
+}
+
+.info-hotspot-text a[target="_blank"]:hover,
+.info-hotspot-modal .info-hotspot-text a[target="_blank"]:hover,
+.clickable-link[target="_blank"]:hover {
+  color: #ffcccb !important; /* Rojo claro al hacer hover, igual que otros enlaces */
+}
+
+/* Para móvil, hacer los enlaces más grandes y fáciles de tocar */
+@media (max-width: 768px) {
+  .info-hotspot-text a,
+  .info-hotspot-modal .info-hotspot-text a,
+  .clickable-link {
+    font-size: 16px;
+    padding: 8px 4px;
+    display: inline-block;
+    min-height: 32px;
+    line-height: 1.2;
+    /* Asegurar que los enlaces sean clicables en móvil */
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-touch-callout: default !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+    /* Aumentar el área de toque */
+    margin: 2px 0;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Asegurar que los enlaces en el modal móvil sean clicables */
+  .info-hotspot-modal .info-hotspot-text a,
+  .info-hotspot-modal .clickable-link {
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto !important;
+  }
 }
 
 /* View control buttons */
@@ -839,19 +979,111 @@ body.view-control-buttons .viewControlButton {
   border-bottom: 1px solid rgba(255,255,255,.08);
   display: flex; align-items: center;
 }
-#brandBar .brand-wrap { width: 100%; padding: 0 12px; display: flex; gap: 10px; align-items: center; }
-#brandBar .brand-title { font-weight: 600; letter-spacing: .3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#brandBar .brand-wrap { 
+  width: 100%; 
+  padding: 0 12px; 
+  display: flex; 
+  gap: 10px; 
+  align-items: center; 
+  justify-content: center; /* Centrar el contenido */
+}
+#brandBar .brand-title { 
+  font-weight: 600; 
+  letter-spacing: .3px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  text-align: center; /* Centrar el texto */
+  font-size: 14px; /* Tamaño base para desktop */
+}
+
+/* ====== RESPONSIVE PARA MÓVIL ====== */
+@media (max-width: 768px) {
+  #brandBar {
+    height: 72px; /* Doble de altura en móvil */
+  }
+  
+  #brandBar .brand-title {
+    font-size: 14px; /* Texto más grande para dos líneas */
+    letter-spacing: .1px;
+    padding: 0 8px;
+    white-space: normal; /* Permitir salto de línea */
+    line-height: 1.3; /* Espaciado entre líneas */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ocupar toda la altura de la barra */
+  }
+  
+  #brandBar .brand-wrap {
+    padding: 0 8px;
+    height: 100%; /* Ocupar toda la altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ====== AJUSTES PARA MÓVIL CON BARRA ALTA ====== */
+  #titleBar { 
+    top: 72px !important; /* Empezar justo después de la barra superior (72px) */
+    height: 50px !important; /* Altura de la barra de título */
+    display: block !important; /* Asegurar que sea visible */
+    z-index: 9999; /* Asegurar que esté por encima */
+  }
+  
+  .mobile #titleBar { 
+    top: 72px !important; /* Empezar justo después de la barra superior */
+    height: 50px !important; /* Altura de la barra de título */
+    display: block !important; /* Asegurar que sea visible */
+    z-index: 9999; /* Asegurar que esté por encima */
+  }
+  
+  .mobile #titleBar .sceneName {
+    line-height: 40px; /* Ajustar altura del texto para la barra de 50px */
+    font-size: 16px; /* Texto más grande y legible */
+    font-weight: 600;
+  }
+  
+  #sceneList { 
+    padding-top: calc(50px + 72px); /* Ajustar padding: altura titleBar (50px) + altura brandBar (72px) = 122px */
+  }
+  
+  #fullscreenToggle,
+  #autorotateToggle,
+  #sceneListToggle,
+  #aboutToggle { 
+    top: 72px !important; /* Ajustar posición de botones */
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  #brandBar .brand-title {
+    font-size: 13px; /* Ligeramente más pequeño pero legible */
+    line-height: 1.2;
+  }
+  
+  .mobile #titleBar .sceneName {
+    font-size: 15px; /* Texto ligeramente más pequeño en pantallas muy pequeñas */
+    line-height: 40px; /* Mantener consistencia con la altura de la barra */
+  }
+}
 
 
-#titleBar { top: 36px; }
-.mobile #titleBar { top: 36px; }
+/* ====== POSICIONES BASE (DESKTOP) ====== */
+/* Solo aplicar estos estilos en desktop */
+@media (min-width: 769px) {
+  #titleBar { top: 36px; }
+  .mobile #titleBar { top: 36px; }
 
-#sceneList { padding-top: calc(40px + 36px); }
-.mobile #sceneList { padding-top: calc(50px + 36px); }
+  #sceneList { padding-top: calc(40px + 36px); }
+  .mobile #sceneList { padding-top: calc(50px + 36px); }
 
-#fullscreenToggle,
-#autorotateToggle,
-#sceneListToggle { top: 36px; }
+  #fullscreenToggle,
+  #autorotateToggle,
+  #sceneListToggle { top: 36px; }
+}
 
 /* ===== Botón Info ===== */
 #aboutToggle {
@@ -862,8 +1094,12 @@ body.view-control-buttons .viewControlButton {
   background-color: #BF092F;
   z-index: 10001;
 }
-body.fullscreen-enabled #aboutToggle { right: 80px; }   
-.mobile #aboutToggle { width: 50px; height: 50px; right: 50px; }
+body.fullscreen-enabled #aboutToggle { right: 40px; }   
+.mobile #aboutToggle { 
+  width: 50px; 
+  height: 50px; 
+  right: 0px; /* Sin espacio extra en móvil */
+}
 #aboutToggle .icon { position: absolute; top: 5px; right: 5px; width: 30px; height: 30px; }
 .mobile #aboutToggle .icon { top: 10px; right: 10px; }
 
@@ -885,6 +1121,134 @@ body.fullscreen-enabled #aboutToggle { right: 80px; }
 #aboutPanel .about-title { font-weight: 700; margin-bottom: 6px; }
 #aboutPanel .about-body { font-size: 14px; line-height: 1.35; }
 #aboutPanel.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-#autorotateToggle { display: none !important; }
+/* ====== OCULTAR BOTÓN AUTOROTATE ====== */
+#autorotateToggle { 
+  display: none !important; 
+}
+
+/* Asegurar que esté oculto en todos los casos */
+.mobile #autorotateToggle,
+body.fullscreen-enabled #autorotateToggle,
+body.fullscreen-enabled.mobile #autorotateToggle {
+  display: none !important;
+}
+
+/* ====== FIX: Info sin descripción (mostrar solo el título como chip) ====== */
+.info-hotspot.no-text .info-hotspot-header {
+  /* que deje de ser un círculo fijo */
+  width: auto !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  background: rgba(191, 9, 47, 0.95); /* #BF092F */
+  color: #fff;
+  padding: 6px 10px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  /* Asegurar que los hotspots sin texto también estén por encima */
+  z-index: 10001 !important;
+  cursor: default;                /* no clic en desktop */
+  transition: none !important;    /* evita animaciones de hover/visible */
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+}
+
+/* oculta el ícono "i" y el botón cerrar */
+.info-hotspot.no-text .info-hotspot-icon-wrapper { display: none !important; }
+.info-hotspot.no-text .info-hotspot-close-wrapper { display: none !important; }
+
+/* el contenedor del título debe ser visible y ocupar su ancho */
+.info-hotspot.no-text .info-hotspot-title-wrapper {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  transition: none !important;
+}
+
+/* el título en una sola línea */
+.info-hotspot.no-text .info-hotspot-title {
+  display: inline !important;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* desactiva los efectos de hover de escritorio en no-text */
+.desktop.no-touch .info-hotspot.no-text .info-hotspot-header:hover {
+  width: auto !important;
+  border-radius: 12px !important;
+}
+
+/* por si algún estilo de "visible" intenta abrirlo,
+   mantenemos la caja compacta en no-text */
+.desktop .info-hotspot.no-text.visible .info-hotspot-header,
+.desktop.no-touch .info-hotspot.no-text.visible .info-hotspot-header:hover {
+  width: auto !important;
+  border-radius: 12px !important;
+}
+
+/* ====== PEEK PARA MÓVIL (hotspots sin descripción) ====== */
+.info-hotspot-peek {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(191, 9, 47, 0.95);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  max-width: 80vw;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.info-hotspot-peek.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-hotspot-peek-title {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ====== MEJORAS PARA MÓVIL ====== */
+@media (max-width: 768px) {
+  .info-hotspot-modal {
+    z-index: 12000 !important;
+  }
+  
+  .info-hotspot-modal .info-hotspot-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .info-hotspot-modal .info-hotspot-header {
+    height: 60px;
+    top: 20px;
+  }
+  
+  .info-hotspot-modal .info-hotspot-text {
+    top: 80px;
+  }
+}
+
+/* ====== FIX PARA DETECCIÓN DE TÁCTIL ====== */
+.mobile .info-hotspot-modal {
+  display: block;
+}
+
+.desktop .info-hotspot-modal {
+  display: none;
+}
+
 
 

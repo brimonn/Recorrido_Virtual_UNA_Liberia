@@ -371,6 +371,269 @@
   return wrapper;
 }
 
+// Función para configurar enlaces clicables en móvil
+function setupClickableLinks(container) {
+  var links = container.querySelectorAll('.clickable-link');
+  for (var i = 0; i < links.length; i++) {
+    var link = links[i];
+    
+    // Agregar event listeners específicos para móvil
+    link.addEventListener('touchstart', function(e) {
+      e.stopPropagation();
+    }, { passive: false });
+    
+    link.addEventListener('touchend', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      // Abrir el enlace
+      if (this.href) {
+        window.open(this.href, this.target || '_self');
+      }
+    }, { passive: false });
+    
+    link.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Para desktop, permitir el comportamiento normal
+      if (window.innerWidth > 768) {
+        return true;
+      }
+      // Para móvil, prevenir el comportamiento por defecto y manejarlo manualmente
+      e.preventDefault();
+      if (this.href) {
+        window.open(this.href, this.target || '_self');
+      }
+    }, { passive: false });
+  }
+}
+
+function createInfoHotspotElement(hotspot) {
+  // Función para detectar si es dispositivo táctil
+  function isTouchDevice() {
+    // Detectar si es móvil basado en el ancho de pantalla
+    return window.innerWidth <= 768;
+  }
+  
+  // Función para convertir emails, teléfonos y enlaces en clicables
+  function makeContactClickable(text) {
+    if (!text) return text;
+    
+    // Convertir enlaces en formato Markdown [texto](url) en enlaces clicables
+    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
+      '<a href="$2" target="_blank" class="clickable-link" style="color: #fff; text-decoration: underline; font-weight: 600;">$1</a>');
+    
+    // Convertir emails en enlaces mailto
+    text = text.replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g, 
+      '<a href="mailto:$1" class="clickable-link" style="color: #fff; text-decoration: underline;">$1</a>');
+    
+    // Convertir números de teléfono en enlaces tel
+    text = text.replace(/(\+?[0-9\s\-\(\)]{7,})/g, function(match) {
+      // Limpiar el número para el enlace tel
+      var cleanNumber = match.replace(/[\s\-\(\)]/g, '');
+      return '<a href="tel:' + cleanNumber + '" class="clickable-link" style="color: #fff; text-decoration: underline;">' + match + '</a>';
+    });
+    
+    return text;
+  }
+  
+  // Verificar si tiene descripción
+  var hasText = typeof hotspot.text === 'string' && hotspot.text.trim() !== '';
+
+  // Wrapper principal
+  var wrapper = document.createElement('div');
+  wrapper.classList.add('hotspot', 'info-hotspot', 'collapsed');
+
+  // Header / chip
+  var header = document.createElement('div');
+  header.classList.add('info-hotspot-header');
+  header.setAttribute('role', 'button');
+  header.setAttribute('tabindex', '0');
+  header.style.touchAction = 'manipulation'; // Elimina delay de 300ms
+
+  // Icono
+  var iconWrapper = document.createElement('div');
+  iconWrapper.classList.add('info-hotspot-icon-wrapper');
+  var icon = document.createElement('img');
+  icon.src = 'img/info.png';
+  icon.classList.add('info-hotspot-icon');
+  iconWrapper.appendChild(icon);
+
+  // Título
+  var titleWrapper = document.createElement('div');
+  titleWrapper.classList.add('info-hotspot-title-wrapper');
+  var title = document.createElement('div');
+  title.classList.add('info-hotspot-title');
+  title.textContent = hotspot.title || '';
+  titleWrapper.appendChild(title);
+
+  header.appendChild(iconWrapper);
+  header.appendChild(titleWrapper);
+  wrapper.appendChild(header);
+
+  // ====== CON DESCRIPCIÓN ======
+  if (hasText) {
+    // Botón de cerrar para desktop
+    var closeWrapper = document.createElement('div');
+    closeWrapper.classList.add('info-hotspot-close-wrapper');
+    var closeIcon = document.createElement('img');
+    closeIcon.src = 'img/close.png';
+    closeIcon.classList.add('info-hotspot-close-icon');
+    closeWrapper.appendChild(closeIcon);
+    wrapper.appendChild(closeWrapper);
+
+    // Panel de texto para desktop
+    var text = document.createElement('div');
+    text.classList.add('info-hotspot-text');
+    text.innerHTML = makeContactClickable(hotspot.text);
+    wrapper.appendChild(text);
+
+    // Modal para móvil
+    var modal = document.createElement('div');
+    modal.classList.add('info-hotspot-modal');
+
+    var modalHeader = document.createElement('div');
+    modalHeader.classList.add('info-hotspot-header');
+
+    var modalIconW = document.createElement('div');
+    modalIconW.classList.add('info-hotspot-icon-wrapper');
+    var modalIcon = document.createElement('img');
+    modalIcon.src = 'img/info.png';
+    modalIcon.classList.add('info-hotspot-icon');
+    modalIconW.appendChild(modalIcon);
+
+    var modalTitleW = document.createElement('div');
+    modalTitleW.classList.add('info-hotspot-title-wrapper');
+    var modalTitle = document.createElement('div');
+    modalTitle.classList.add('info-hotspot-title');
+    modalTitle.textContent = hotspot.title || '';
+    modalTitleW.appendChild(modalTitle);
+
+    var modalCloseW = document.createElement('div');
+    modalCloseW.classList.add('info-hotspot-close-wrapper');
+    var modalCloseIcon = document.createElement('img');
+    modalCloseIcon.src = 'img/close.png';
+    modalCloseIcon.classList.add('info-hotspot-close-icon');
+    modalCloseW.appendChild(modalCloseIcon);
+
+    var modalText = document.createElement('div');
+    modalText.classList.add('info-hotspot-text');
+    modalText.innerHTML = makeContactClickable(hotspot.text);
+
+    modalHeader.appendChild(modalIconW);
+    modalHeader.appendChild(modalTitleW);
+    modalHeader.appendChild(modalCloseW);
+    modal.appendChild(modalHeader);
+    modal.appendChild(modalText);
+    document.body.appendChild(modal);
+
+    // Funciones de control
+    function openMobile() {
+      modal.classList.add('visible');
+      wrapper.classList.remove('visible');
+      wrapper.classList.add('collapsed');
+    }
+
+    function closeMobile() {
+      modal.classList.remove('visible');
+      wrapper.classList.add('collapsed');
+    }
+
+    function toggleDesktop() {
+      wrapper.classList.toggle('visible');
+      wrapper.classList.toggle('collapsed', !wrapper.classList.contains('visible'));
+    }
+
+    // Handler unificado para activación
+    function handleActivation(e) {
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
+      
+      if (isTouchDevice()) {
+        if (modal.classList.contains('visible')) {
+          closeMobile();
+        } else {
+          openMobile();
+        }
+      } else {
+        toggleDesktop();
+      }
+    }
+
+    // Event listeners robustos - SOLO UNO por tipo de evento
+    wrapper.addEventListener('click', handleActivation, { passive: false });
+    
+    // Soporte para teclado
+    wrapper.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleActivation(e);
+      }
+    });
+
+    // Cerrar modal
+    modalCloseW.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
+      closeMobile();
+    });
+
+    // Cerrar modal al hacer clic fuera
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeMobile();
+      }
+    });
+
+    // Cerrar panel desktop
+    closeWrapper.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
+      wrapper.classList.remove('visible');
+      wrapper.classList.add('collapsed');
+    });
+
+  } else {
+    // ====== SIN DESCRIPCIÓN ======
+    // Para hotspots sin texto, solo mostrar el chip
+    // En móvil, opcionalmente mostrar peek
+    var peek = document.createElement('div');
+    peek.classList.add('info-hotspot-peek');
+    peek.innerHTML = '<div class="info-hotspot-peek-title">' + (hotspot.title || '') + '</div>';
+    document.body.appendChild(peek);
+
+    var timer = null;
+    function showPeek(e) {
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
+      
+      // Solo mostrar peek en móvil
+      if (isTouchDevice()) {
+        peek.classList.add('visible');
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(function() { 
+          peek.classList.remove('visible'); 
+        }, 2000);
+      }
+    }
+
+    // Event listener para todos los casos
+    wrapper.addEventListener('click', showPeek, { passive: false });
+  }
+
+  // Bloquea propagación al visor (pan/zoom)
+  stopTouchAndScrollEventPropagation(wrapper);
+
+  // Configurar enlaces clicables después de un breve delay para asegurar que el DOM esté listo
+  setTimeout(function() {
+    setupClickableLinks(wrapper);
+  }, 100);
+
+  return wrapper;
+}
+
+
+
+
+/* =====================================================
   function createInfoHotspotElement(hotspot) {
 
     // Create wrapper element to hold icon and tooltip.
@@ -442,7 +705,7 @@
     stopTouchAndScrollEventPropagation(wrapper);
 
     return wrapper;
-  }
+  }*/
 
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {

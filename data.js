@@ -4,7 +4,7 @@ var APP_DATA = {
     // ==== A1 ====
     { 
       "id": "0-a1",
-      "name": "A1",
+      "name": "Entrada principal",
       "levels": [
         {
           "tileSize": 256,
@@ -51,7 +51,7 @@ var APP_DATA = {
     // ==== A2 ====
     {
       "id": "1-a2",
-      "name": "A2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -96,12 +96,23 @@ var APP_DATA = {
           }
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 0.506825,
+          "pitch": -0.084823,
+          "title": "Caseta de vigilancia",
+          "text": "Funcionario:<br>"
+          + "<b>Caseta de Seguridad<br><br>"
+          + "<b>Contacto</b>:<br>"
+          + "efrain.aragon.obregon@una.cr<br>"
+          + "2562-6261<br><br>"
+        }
+      ]
     },
     // ==== A3 ====
     {
       "id": "2-a3",
-      "name": "A3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -151,7 +162,7 @@ var APP_DATA = {
     // ==== A4 ====
     {
       "id": "3-a4",
-      "name": "A4",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -209,13 +220,17 @@ var APP_DATA = {
         }
       ],
       "infoHotspots": [
-        
+        {
+          "yaw": 3.005629,
+          "pitch": 0.030903,
+          "title": "Comedor"
+        }
       ]
     },
     // ==== A5 ====
     {
       "id": "4-a5",
-      "name": "A5",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -265,7 +280,7 @@ var APP_DATA = {
     // ==== A6 ====
     {
       "id": "5-a6",
-      "name": "A6",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -309,21 +324,51 @@ var APP_DATA = {
           "yaw": -1.401779,
           "pitch": 0.4609,
           "rotation": 0,
-          "target": "44-lab12"
+          "target": "44-lab12",
+          "name": "Laboratorio #13"
         },
         {
           "yaw": -1.733989,
           "pitch": 0.457628,
           "rotation": 0,
-          "target": "46-lab13"
+          "target": "46-lab13",
+          "name": "Laboratorio #12"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 1.624572,
+          "pitch": -0.183232,
+          "title": "Vida Estudiantil",
+          "text": "Funcionario/a:<br>"
+          + "<b>Alexander Arias Gómez<br><br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "alexander.arias.gomez@una.cr<br>"
+          + "2562-62889<br><br>"
+        },
+        {
+          "yaw": 1.496714,
+          "pitch": -0.185432,
+          "title": "Psicología"
+        },
+        {
+          "yaw": -1.500216,
+          "pitch": -0.137431,
+          "title": "Laboratiorio #13"
+        },
+        {
+          "yaw": -1.652191,
+          "pitch": -0.138730,
+          "title": "Laboratorio #12"
+        }
+      ]
     },
-    // ==== LAB 12 ====
+    // ==== LAB 13 ====
     {
       "id": "44-lab12",
-      "name": "Laboratorio #12",
+      "name": "Laboratorio #13",
       "levels": [
         {
           "tileSize": 256,
@@ -354,15 +399,16 @@ var APP_DATA = {
           "yaw": 2.82827,
           "pitch": 0.480356,
           "rotation": 0,
-          "target": "5-a6"
+          "target": "5-a6",
+          "name": "Salir"
         }
       ],
       "infoHotspots": []
     },
-    // ==== LAB 13 ====
+    // ==== LAB 12 ====
     {
       "id": "46-lab13",
-      "name": "Laboratorio #13",
+      "name": "Laboratorio #12",
       "levels": [
         {
           "tileSize": 256,
@@ -393,7 +439,8 @@ var APP_DATA = {
           "yaw": -0.104645,
           "pitch": 0.549512,
           "rotation": 0,
-          "target": "5-a6"
+          "target": "5-a6",
+          "name": "Salir"
         }
       ],
       "infoHotspots": []
@@ -401,7 +448,7 @@ var APP_DATA = {
     // ==== A7 ====
     {
       "id": "6-a7",
-      "name": "A7",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -445,17 +492,49 @@ var APP_DATA = {
           "yaw": -2.97742,
           "pitch": 0.468558,
           "rotation": 0,
-          "target": "47-labingles"
+          "target": "47-labingles",
+          "name": "Laboratorio de Idiomas"
         }
         ,
         {
           "yaw": 0.158186,
           "pitch": 0.396846,
           "rotation": 0,
-          "target": "45-labfisica"
+          "target": "45-labfisica",
+          "name": "Laboratorio de Física"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 0.190234,
+          "pitch": -0.219092,
+          "title": "Laboratorio de Física"
+        },
+        {
+          "yaw": 0.035435,
+          "pitch": -0.220315,
+          "title": "Unidad de Registro y Gestión Financiera",
+          "text": "Funcionario/a registro:<br>"
+          + "<b>Elieth Peña Fajardo<br><br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "elieth.pena.fajardo@una.cr<br>"
+          + "2562-6259<br><br>"
+          +"Funcionario/a financiero:<br>"
+          + "<b>Marilyn Forlenza Méndez<br><br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "marilyn.forlenza.mendez@una.cr<br>"
+          + "2562-6260<br>"
+        },
+        {
+          "yaw": -2.91088,
+          "pitch": -0.123195,
+          "title": "Aula #11: Laboratorio de Idiomas"
+        }
+      ]
     },
     // ==== LAB IDIOMAS ====
     {
@@ -538,7 +617,7 @@ var APP_DATA = {
     // ==== A8 ====
     {
       "id": "7-a8",
-      "name": "A8",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -585,12 +664,30 @@ var APP_DATA = {
           "view": {"yaw": -1.414136,"pitch": 0.062141,"fov": 1.299127}
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 1.616167,
+          "pitch": 0.175958,
+          "title": "Éxito Académico",
+          "text": "Funcionario/a:<br>"
+          + "<b>Ana Francis Rosales Jenkins<br><br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "ana.rosales.jenkins@una.cr<br>"
+          + "2562-6273<br>"
+        },
+        {
+          "yaw": 0.361358,
+          "pitch": -0.141507,
+          "title": "Sala de lactancia"
+        }
+      ]
     },
     // ==== A9 ====
     {
       "id": "8-a9",
-      "name": "A9",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -640,7 +737,7 @@ var APP_DATA = {
     // ==== A10 ====
     {
       "id": "9-a10",
-      "name": "A10",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -690,7 +787,7 @@ var APP_DATA = {
     // ==== A11 ====
     {
       "id": "10-a11",
-      "name": "A11",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -740,7 +837,7 @@ var APP_DATA = {
     // ==== A12 ====
     {
       "id": "11-a12",
-      "name": "A12",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -790,7 +887,7 @@ var APP_DATA = {
     // ==== A13 ====
     {
       "id": "12-a13",
-      "name": "A13",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -842,7 +939,7 @@ var APP_DATA = {
     // ==== E1 ====
     {
       "id": "13-e1",
-      "name": "E1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -870,14 +967,14 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": -0.07774174958155378,
-          "pitch": 0.1515626037143729,
+          "yaw": -0.069595,
+          "pitch": 0.495523,
           "rotation": 0,
           "target": "3-a4"
         },
         {
-          "yaw": 3.0554664419856508,
-          "pitch": 0.21292764090229177,
+          "yaw": 3.022695,
+          "pitch": 0.543099,
           "rotation": 0,
           "target": "14-e2"
         }
@@ -887,7 +984,7 @@ var APP_DATA = {
     // ==== E2 ====
     {
       "id": "14-e2",
-      "name": "E2",
+      "name": "Comedor",
       "levels": [
         {
           "tileSize": 256,
@@ -915,14 +1012,19 @@ var APP_DATA = {
       },
       "linkHotspots": [
         {
-          "yaw": 3.112161839585676,
-          "pitch": 0.16796064230942065,
+          "yaw": 3.119413,
+          "pitch": 0.548811,
           "rotation": 0,
-          "target": "13-e1"
+          "target": "13-e1",
+          "view": {
+            "yaw": -0.103397,
+            "pitch": 0.049848,
+            "fov": 1.745329
+          }          
         },
         {
-          "yaw": -0.023614488324327,
-          "pitch": 0.16073889947268327,
+          "yaw": -0.015214,
+          "pitch": 0.460218,
           "rotation": 0,
           "target": "15-e3",
           "view": {
@@ -937,7 +1039,7 @@ var APP_DATA = {
     // ==== E3 ====
     {
       "id": "15-e3",
-      "name": "E3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -992,7 +1094,7 @@ var APP_DATA = {
     // ==== E4 ====
     {
       "id": "16-e4",
-      "name": "Soda",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1043,7 +1145,7 @@ var APP_DATA = {
     // ==== B1 ====
     {
       "id": "37-b1",
-      "name": "B1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1088,7 +1190,7 @@ var APP_DATA = {
     // ==== B1.2 ====
     {
       "id": "38-bb1",
-      "name": "B1.2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1138,7 +1240,7 @@ var APP_DATA = {
     // ==== B1.3 ====
     {
       "id": "39-bbb1",
-      "name": "B1.3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1183,12 +1285,14 @@ var APP_DATA = {
           "target": "18-b2"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        
+      ]
     },
     // ==== B2 ====
     {
       "id": "18-b2",
-      "name": "B2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1233,12 +1337,20 @@ var APP_DATA = {
           "target": "23-c1"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 1.03383,
+          "pitch": -0.113366,
+          "title": "Asociación de Estudiantes ASEUNAL",
+          "text":"<b>Contacto</b>:<br>"
+          + "aseunal@una.cr<br>"
+        }
+      ]
     },
     // ==== B3 ====
     {
       "id": "19-b3",
-      "name": "B3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1283,7 +1395,7 @@ var APP_DATA = {
     // ==== B4 ====
     {
       "id": "20-b4",
-      "name": "B4",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1333,7 +1445,7 @@ var APP_DATA = {
     // ==== B5 ====
     {
       "id": "21-b5",
-      "name": "B5",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1383,7 +1495,7 @@ var APP_DATA = {
     // ==== B6 ====
     {
       "id": "22-b6",
-      "name": "B6",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1434,7 +1546,7 @@ var APP_DATA = {
     // ==== BIBLIOTECA PRINCIPAL ====
     {
       "id": "40-bp",
-      "name": "B7",
+      "name": "Biblioteca",
       "levels": [
         {
           "tileSize": 256,
@@ -1470,19 +1582,22 @@ var APP_DATA = {
             "yaw": 0.261316,
             "pitch": -0.080844,
             "fov": 1.34839
-          }
+          },
+          "name": "Sala de estudio"
         },
         {
           "yaw": 1.449746,
           "pitch": 0.492541,
           "rotation": 0,
-          "target": "43-bext2"
+          "target": "43-bext2",
+          "name": "Patio biblioteca"
         },
         {
           "yaw": -0.663748,
           "pitch": 0.406905,
           "rotation": 0,
-          "target": "42-bext1"
+          "target": "42-bext1",
+          "name": "Patio biblioteca"
         },
         {
           "yaw": -2.606107,
@@ -1493,7 +1608,8 @@ var APP_DATA = {
             "yaw": 3.002739,
             "pitch": -0.003887,
             "fov": 1.299127
-          }
+          },
+          "name": "Salir"
         }
       ],
       "infoHotspots": [
@@ -1504,16 +1620,19 @@ var APP_DATA = {
           "text": "Horario de atención: <br>"
           + "<b>De Lunes a Viernes</b><br>"
           + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Nombre del funcionario</b><br>"
+          + "<b>Blanca Barahona Barahona</b><br><br>"
           + "<b>Contacto</b>:<br>"
-          + "anjdnajn@gmail.com<br>"
-          + "+506 7777-7777"
+          + "blanca.baraboha.barahona@una.cr<br>"
+          + "2562-6263<br>"
+          + "[Instagram](https://www.instagram.com/biblio_rose_marie_una?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==)"
         }
       ]
     },
     // ==== Sala de estudio 1 ====
     {
       "id": "41-sle1",
-      "name": "Sala de Estudio 1",
+      "name": "Sala de Estudio",
       "levels": [
         {
           "tileSize": 256,
@@ -1595,7 +1714,8 @@ var APP_DATA = {
             "yaw": -0.861295,
             "pitch": 0.515432,
             "rotation": 0,
-            "target": "52-saladecanos"
+            "target": "52-saladecanos",
+            "name": "Sala de Ex-Decanos"
         }
       ],
       "infoHotspots": []
@@ -1603,7 +1723,7 @@ var APP_DATA = {
     // ========== SALA EX-DECANOS ==========
     {
       "id": "52-saladecanos",
-      "name": "Sala ex decanos",
+      "name": "Sala de Ex-Decanos",
       "levels": [
         {
           "tileSize": 256,
@@ -1694,7 +1814,7 @@ var APP_DATA = {
     // ========== 1 ==========
     {
       "id": "53-libros1",
-      "name": "Seccion libros 1",
+      "name": "Sección de libros",
       "levels": [
         {
           "tileSize": 256,
@@ -1741,7 +1861,7 @@ var APP_DATA = {
     // ========== 2 ==========
     {
       "id": "54-libros2",
-      "name": "Seccion libros 2",
+      "name": "Sección de libros",
       "levels": [
         {
           "tileSize": 256,
@@ -1787,7 +1907,7 @@ var APP_DATA = {
     // ========== 3 ==========
     {
       "id": "55-libros3",
-      "name": "Seccion libros 3",
+      "name": "Sección de libros",
       "levels": [
         {
           "tileSize": 256,
@@ -1828,7 +1948,7 @@ var APP_DATA = {
     // ==== C1 ====
     {
       "id": "23-c1",
-      "name": "C1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1884,7 +2004,7 @@ var APP_DATA = {
     // ==== C2 ====
     {
       "id": "24-c2",
-      "name": "C2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1933,7 +2053,7 @@ var APP_DATA = {
     },
     {
       "id": "25-c3",
-      "name": "C3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -1972,12 +2092,18 @@ var APP_DATA = {
           }
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": -0.292195,
+          "pitch": -0.243187,
+          "title": "Sala de profesores"
+        }
+      ]
     },
     //  D  _____________________________________________________________________________________________________
     {
       "id": "26-d1",
-      "name": "D1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2028,11 +2154,39 @@ var APP_DATA = {
 
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": -0.587247,
+          "pitch": -0.192523,
+          "title": "Residencias Estudiantiles"
+        },
+        {
+          "yaw": -0.181891,
+          "pitch": -0.072495,
+          "title": "Coordinación Residencias Estudiantiles",
+          "text": "Funcionario/a:<br>"
+          + "<b>Daniela Castro Villalobos<br><br>"
+          + "<b>De Lunes a Viernes</b><br>"
+          + "<b>8:00 AM a 5:00 PM</b><br></br>"
+          + "<b>Contacto</b>:<br>"
+          + "daniela.castro.villalobos@una.cr<br>"
+          + "562-6298<br>"
+        },
+        {
+          "yaw": 1.62408,
+          "pitch": -0.029698,
+          "title": "Gimnasio"
+        },
+        {
+          "yaw": -1.580091,
+          "pitch": 0.118107,
+          "title": "Punto de encuentro/Zona segura"
+        }
+      ]
     },
     {
       "id": "27-d2",
-      "name": "D2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2081,7 +2235,7 @@ var APP_DATA = {
     },
     {
       "id": "28-d3",
-      "name": "D3",
+      "name": "Gimnasio",
       "levels": [
         {
           "tileSize": 256,
@@ -2125,7 +2279,7 @@ var APP_DATA = {
     //  F  _____________________________________________________________________________________________________________
     {
       "id": "29-f3",
-      "name": "F3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2174,7 +2328,7 @@ var APP_DATA = {
     },
     {
       "id": "30-f2",
-      "name": "F2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2223,7 +2377,7 @@ var APP_DATA = {
     },
     {
       "id": "31-f1",
-      "name": "F1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2267,7 +2421,7 @@ var APP_DATA = {
     },
     {
       "id": "32-f4",
-      "name": "F4",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2311,7 +2465,7 @@ var APP_DATA = {
     //  =================================== SECCIÓN G ===================================
     {
       "id": "33-g1",
-      "name": "G1",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2365,7 +2519,7 @@ var APP_DATA = {
     },
     {
       "id": "34-g2",
-      "name": "G2",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2409,7 +2563,7 @@ var APP_DATA = {
     },
     {
       "id": "35-g3",
-      "name": "G3",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2458,7 +2612,7 @@ var APP_DATA = {
     },
     {
       "id": "36-g4",
-      "name": "G4",
+      "name": "",
       "levels": [
         {
           "tileSize": 256,
@@ -2497,22 +2651,35 @@ var APP_DATA = {
           "pitch": 0.322952,
           "rotation": -0.10,
           "target": "35-g3",
-          "name": " avanzar"
+          "name": ""
         },
         {
           "yaw": 1.323503,
           "pitch": 0.410157,
           "rotation": 0,
-          "target": "48-labizquierda"
+          "target": "48-labizquierda",
+          "name": "Laboratorio de Biología y Microbiología"
         },
         {
           "yaw": 1.772689,
           "pitch": 0.440697,
           "rotation": 0,
-          "target": "49-labderecha1"
+          "target": "49-labderecha1",
+          "name": "Laboratorio de Química"
         }
       ],
-      "infoHotspots": []
+      "infoHotspots": [
+        {
+          "yaw": 1.299063,
+          "pitch": -0.132013,
+          "title": "Laboratorio de Biología y Microbiología"
+        },
+        {
+          "yaw": 2.072046,
+          "pitch": -0.112665,
+          "title": "Laboratorio de Química"
+        }
+      ]
     },
     // =================== LABORATORIOS ===================
     {
@@ -2593,7 +2760,8 @@ var APP_DATA = {
           "yaw": 0.177968,
           "pitch": 0.701005,
           "rotation": -0.10,
-          "target": "36-g4"
+          "target": "36-g4",
+          "name": "Salir"
         },
         {
           "yaw": 2.136001,
@@ -2606,7 +2774,7 @@ var APP_DATA = {
     },
     {
       "id": "50-labderecha2",
-      "name": "Laboratorio Derecha 2",
+      "name": "Laboratorio de Química",
       "levels": [
         {
           "tileSize": 256,
@@ -2644,7 +2812,7 @@ var APP_DATA = {
     },
     {
       "id": "51-labderecha3",
-      "name": "Laboratorio Derecha 3",
+      "name": "Laboratorio de Química",
       "levels": [
         {
           "tileSize": 256,
