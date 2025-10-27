@@ -56,7 +56,6 @@ a, a:hover, a:active, a:visited {
   right: 50px;
 }
 
-/* If there is a fullscreen button the title bar must make space for it */
 body.fullscreen-enabled #titleBar {
   right: 80px;
 }
@@ -65,7 +64,6 @@ body.fullscreen-enabled.mobile #titleBar {
   right: 100px;
 }
 
-/* If there are multiple scenes the title bar must make space for the scene list toggle */
 body.multiple-scenes #titleBar {
   left: 40px;
 }
@@ -162,7 +160,6 @@ body.fullscreen-enabled #fullscreenToggle {
   height: 50px;
 }
 
-/* If there is a fullscreen button, autorotate must placed a bit to the left */
 body.fullscreen-enabled #autorotateToggle {
   right: 40px;
 }
@@ -267,27 +264,25 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   transition: margin-left 0.5s ease-in-out;
 }
 
-/* ====== SCROLLBAR PERSONALIZADO ====== */
 #sceneList::-webkit-scrollbar {
   width: 8px;
 }
 
 #sceneList::-webkit-scrollbar-track {
-  background: #8E1616; /* Fondo del scroll en rojo oscuro */
+  background: #8E1616; 
   border-radius: 4px;
 }
 
 #sceneList::-webkit-scrollbar-thumb {
-  background: #BF092F; /* Barra del scroll en rojo principal */
+  background: #BF092F; 
   border-radius: 4px;
   border: 1px solid #8E1616;
 }
 
 #sceneList::-webkit-scrollbar-thumb:hover {
-  background: #A31D1D; /* Rojo más oscuro al hacer hover */
+  background: #A31D1D; 
 }
 
-/* Para Firefox */
 #sceneList {
   scrollbar-width: thin;
   scrollbar-color: #BF092F #8E1616;
@@ -307,7 +302,7 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   width: 100%;
   height: 100%;
   left: -100%;
-  background-color: #A31D1D; /* Asegurar fondo rojo en móvil */
+    background-color: #A31D1D; 
 }
 
 .mobile #sceneList.enabled {
@@ -316,8 +311,8 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 
 .mobile #sceneList .scenes {
   height: 100%;
-  background-color: #A31D1D !important; /* Fondo rojo sólido */
-  min-height: 100vh; /* Asegurar que cubra toda la altura */
+  background-color: #A31D1D !important; 
+  min-height: 100vh; 
 }
 
 #sceneList.enabled {
@@ -327,26 +322,46 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 #sceneList .scene {
   display: block;
   width: 100%;
-  height: 30px;
+  min-height: 30px; 
+  height: auto; 
 }
 
 .mobile #sceneList .scene {
-  height: 40px;
-  background-color: #A31D1D; /* Fondo rojo para cada elemento */
+  min-height: 40px; 
+  height: auto; 
+  background-color: #A31D1D; 
+}
+
+#sceneList > ul > li.text {
+  color: #FFFFFF !important;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); 
+  margin-top: 0;
+}
+
+.mobile #sceneList > ul > li.text {
+  margin-top: 8px;
 }
 
 #sceneList .scene .text {
   width: 100%;
-  height: 100%;
-  padding: 0 15px;
-  line-height: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  min-height: 30px; 
+  padding: 8px 15px; 
+  line-height: 1.4; 
+  overflow: visible; 
+  text-overflow: clip; 
+  white-space: normal; 
+  word-wrap: break-word; 
+  display: block; 
 }
 
 .mobile #sceneList .scene .text {
-  line-height: 40px;
+  min-height: 40px; 
+  line-height: 1.5; 
 }
 
 .no-touch #sceneList .scene:hover {
@@ -359,12 +374,9 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   background-color: #8E1616;
 }
 
-/* Hide scene list when only a single scene exists */
 body.single-scene #sceneList, body.single-scene #sceneListToggle {
   display: none;
 }
-
-/* Link hotspot */
 
 .link-hotspot {
   width: 60px;
@@ -394,7 +406,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .link-hotspot-tooltip {
   position: absolute;
   left: 100%;
-  top: 14px; /* ( 60 - (16 + 2*8) ) / 2 */
+  top: 14px; 
 
   margin-left: 3px;
 
@@ -424,17 +436,17 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   transform: translateX(-8px);
 
   -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      opacity 0.3s;
+-webkit-transform 0.3s,
+ transform 0.3s,
+ opacity 0.3s;
   transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              opacity 0.3s;
+-webkit-transform 0.3s,
+transform 0.3s,
+opacity 0.3s;
 }
 
 .mobile .link-hotspot {
-  top: 19px; /* ( 70 - (16 + 2*8) ) / 2 */
+  top: 19px; 
 }
 
 .no-touch .link-hotspot:hover .link-hotspot-tooltip {
@@ -444,7 +456,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   transform: translateX(0);
 }
 
-/* Prevent tooltip from triggering */
 .link-hotspot-tooltip {
   pointer-events: none;
 }
@@ -452,7 +463,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   pointer-events: all;
 }
 
-/* Fallback mode without pointer-events (IE8-10) */
 .tooltip-fallback .link-hotspot-tooltip {
   display: none;
 }
@@ -460,14 +470,11 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   display: block;
 }
 
-/* Info hotspot */
-
 .info-hotspot {
   line-height: 1.2em;
   opacity: 0.9;
   -webkit-transition: opacity 0.2s 0.2s;
-  transition: opacity 0.2s 0.2s;
-  /* Asegurar que los hotspots colapsados también estén por encima */
+transition: opacity 0.2s 0.2s;
   z-index: 10000;
 }
 
@@ -479,7 +486,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 .info-hotspot.visible {
   opacity: 1;
-  /* Asegurar que el hotspot desplegado esté por encima de otros */
   position: relative;
   z-index: 10001;
 }
@@ -491,10 +497,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   background-color: #bd2020;
   cursor: pointer;
   -webkit-transition: width 0.3s ease-in-out 0.5s,
-                      border-radius 0.3s ease-in-out 0.5s;
+  border-radius 0.3s ease-in-out 0.5s;
   transition: width 0.3s ease-in-out 0.5s,
-              border-radius 0.3s ease-in-out 0.5s;
-  /* Asegurar que el header esté por encima */
+  border-radius 0.3s ease-in-out 0.5s;
   z-index: 10001;
 }
 
@@ -508,9 +513,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 260px;
   border-radius: 5px;
   -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
+ border-radius 0.3s ease-in-out;
   transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
+ border-radius 0.3s ease-in-out;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-header,
@@ -521,9 +526,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   -webkit-transition: width 0.3s ease-in-out,
-                      border-radius 0.3s ease-in-out;
+  border-radius 0.3s ease-in-out;
   transition: width 0.3s ease-in-out,
-              border-radius 0.3s ease-in-out;
+ border-radius 0.3s ease-in-out;
 }
 
 .info-hotspot .info-hotspot-icon-wrapper {
@@ -551,9 +556,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   padding: 0;
   overflow: hidden;
   -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
+  padding 0s 0.4s;
   transition: width 0s 0.4s,
-              padding 0s 0.4s;
+ padding 0s 0.4s;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-title-wrapper,
@@ -561,9 +566,9 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   width: 220px;
   padding: 0 5px;
   -webkit-transition: width 0s 0.4s,
-                      padding 0s 0.4s;
+  padding 0s 0.4s;
   transition: width 0s 0.4s,
-              padding 0s 0.4s;
+  padding 0s 0.4s;
 }
 
 .info-hotspot .info-hotspot-title-wrapper:before {
@@ -599,13 +604,13 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-transform-origin: 0 50% 0;
   transform-origin: 0 50% 0;
   -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0.6s;
+ -webkit-transform 0.3s 0.3s,
+  transform 0.3s 0.3s,
+  visibility 0s 0.6s;
   transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0.6s;
+-webkit-transform 0.3s 0.3s,
+ transform 0.3s 0.3s,
+ visibility 0s 0.6s;
 }
 
 .desktop .info-hotspot.visible .info-hotspot-close-wrapper {
@@ -614,13 +619,13 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-transform: perspective(200px) rotateY(0deg);
   transform: perspective(200px) rotateY(0deg);
   -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0s;
+-webkit-transform 0.3s,
+ transform 0.3s,
+ visibility 0s 0s;
   transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0s;
+-webkit-transform 0.3s,
+transform 0.3s,
+ visibility 0s 0s;
 }
 
 .info-hotspot .info-hotspot-close-icon {
@@ -643,7 +648,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   border-bottom-left-radius: 5px;
   overflow-y: auto;
   visibility: hidden;
-  /* rotate(90deg) causes transition flicker on Firefox 58 */
   -ms-transform: perspective(200px) rotateX(-89.999deg);
   -webkit-transform: perspective(200px) rotateX(-89.999deg);
   transform: perspective(200px) rotateX(-89.999deg);
@@ -651,13 +655,13 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-transform-origin: 50% 0 0;
   transform-origin: 50% 0 0;
   -webkit-transition: -ms-transform 0.3s,
-                      -webkit-transform 0.3s,
-                      transform 0.3s,
-                      visibility 0s 0.3s;
+  -webkit-transform 0.3s,
+  transform 0.3s,
+  visibility 0s 0.3s;
   transition: -ms-transform 0.3s,
-              -webkit-transform 0.3s,
-              transform 0.3s,
-              visibility 0s 0.3s;
+  -webkit-transform 0.3s,
+  transform 0.3s,
+  visibility 0s 0.3s;
 
   -moz-user-select: text;
   -webkit-user-select: text;
@@ -671,16 +675,14 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   -webkit-transform: perspective(200px) rotateX(0deg);
   transform: perspective(200px) rotateX(0deg);
   -webkit-transition: -ms-transform 0.3s 0.3s,
-                      -webkit-transform 0.3s 0.3s,
-                      transform 0.3s 0.3s,
-                      visibility 0s 0s;
+  -webkit-transform 0.3s 0.3s,
+  transform 0.3s 0.3s,
+  visibility 0s 0s;
   transition: -ms-transform 0.3s 0.3s,
-              -webkit-transform 0.3s 0.3s,
-              transform 0.3s 0.3s,
-              visibility 0s 0s;
+-webkit-transform 0.3s 0.3s,
+transform 0.3s 0.3s,
+ visibility 0s 0s;
 }
-
-/* Info hotspot modal */
 
 .desktop .info-hotspot-modal {
   display: none;
@@ -699,19 +701,19 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.2s ease-in-out 0.5s,
-                      visibility 0s 0.7s;
+   visibility 0s 0.7s;
   transition: opacity 0.2s ease-in-out 0.5s,
-              visibility 0s 0.7s;
+   visibility 0s 0.7s;
 }
 
 .info-hotspot-modal.visible {
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.2s ease-in-out,
-                      visibility 0s 0s;
+   visibility 0s 0s;
   transition: opacity 0.2s ease-in-out,
-              visibility 0s 0s;
-  /* Asegurar que el modal esté por encima de todo */
+   visibility 0s 0s;
+
   z-index: 10002;
 }
 
@@ -818,7 +820,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   transition: opacity 0.3s ease-in-out 0.4s;
 }
 
-/* ====== SCROLL PERSONALIZADO PARA HOTSPOTS ====== */
 .info-hotspot-text::-webkit-scrollbar,
 .info-hotspot-modal .info-hotspot-text::-webkit-scrollbar {
   width: 8px;
@@ -842,14 +843,12 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   background: #A31D1D;
 }
 
-/* Para Firefox */
 .info-hotspot-text,
 .info-hotspot-modal .info-hotspot-text {
   scrollbar-width: thin;
   scrollbar-color: #BF092F #8E1616;
 }
 
-/* ====== ENLACES EN HOTSPOTS ====== */
 .info-hotspot-text a,
 .info-hotspot-modal .info-hotspot-text a,
 .clickable-link {
@@ -857,7 +856,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
   text-decoration: underline !important;
   font-weight: 600;
   transition: color 0.2s ease;
-  /* Asegurar que los enlaces sean clicables */
   pointer-events: auto !important;
   cursor: pointer !important;
 }
@@ -865,25 +863,23 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 .info-hotspot-text a:hover,
 .info-hotspot-modal .info-hotspot-text a:hover,
 .clickable-link:hover {
-  color: #ffcccb !important; /* Rojo claro al hacer hover */
+  color: #ffcccb !important;
   text-decoration: underline !important;
 }
 
-/* Enlaces externos (con target="_blank") */
 .info-hotspot-text a[target="_blank"],
 .info-hotspot-modal .info-hotspot-text a[target="_blank"],
 .clickable-link[target="_blank"] {
-  color: #fff !important; /* Blanco como el resto del texto */
+  color: #fff !important;
   font-weight: 600;
 }
 
 .info-hotspot-text a[target="_blank"]:hover,
 .info-hotspot-modal .info-hotspot-text a[target="_blank"]:hover,
 .clickable-link[target="_blank"]:hover {
-  color: #ffcccb !important; /* Rojo claro al hacer hover, igual que otros enlaces */
+  color: #ffcccb !important; 
 }
 
-/* Para móvil, hacer los enlaces más grandes y fáciles de tocar */
 @media (max-width: 768px) {
   .info-hotspot-text a,
   .info-hotspot-modal .info-hotspot-text a,
@@ -893,7 +889,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
     display: inline-block;
     min-height: 32px;
     line-height: 1.2;
-    /* Asegurar que los enlaces sean clicables en móvil */
     pointer-events: auto !important;
     touch-action: manipulation !important;
     -webkit-touch-callout: default !important;
@@ -901,13 +896,11 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
     -moz-user-select: text !important;
     -ms-user-select: text !important;
     user-select: text !important;
-    /* Aumentar el área de toque */
     margin: 2px 0;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.1);
   }
   
-  /* Asegurar que los enlaces en el modal móvil sean clicables */
   .info-hotspot-modal .info-hotspot-text a,
   .info-hotspot-modal .clickable-link {
     position: relative;
@@ -915,8 +908,6 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
     pointer-events: auto !important;
   }
 }
-
-/* View control buttons */
 
 .viewControlButton {
   display: none;
@@ -934,7 +925,6 @@ body.view-control-buttons .viewControlButton {
   display: block;
 }
 
-/* Hide controls when width is too small */
 @media (max-width: 600px) {
   body.view-control-buttons .viewControlButton {
     display: none;
@@ -949,7 +939,6 @@ body.view-control-buttons .viewControlButton {
   height: 30px;
 }
 
-/* Center is at margin-left: -20px */
 .viewControlButton-1 {
   margin-left: -145px;
 }
@@ -985,7 +974,7 @@ body.view-control-buttons .viewControlButton {
   display: flex; 
   gap: 10px; 
   align-items: center; 
-  justify-content: center; /* Centrar el contenido */
+  justify-content: center; 
 }
 #brandBar .brand-title { 
   font-weight: 600; 
@@ -993,86 +982,84 @@ body.view-control-buttons .viewControlButton {
   white-space: nowrap; 
   overflow: hidden; 
   text-overflow: ellipsis; 
-  text-align: center; /* Centrar el texto */
-  font-size: 14px; /* Tamaño base para desktop */
+  text-align: center; 
+  font-size: 14px;
 }
 
-/* ====== RESPONSIVE PARA MÓVIL ====== */
 @media (max-width: 768px) {
   #brandBar {
-    height: 72px; /* Doble de altura en móvil */
+    height: 72px; 
   }
   
   #brandBar .brand-title {
-    font-size: 14px; /* Texto más grande para dos líneas */
+    font-size: 14px; 
     letter-spacing: .1px;
     padding: 0 8px;
-    white-space: normal; /* Permitir salto de línea */
-    line-height: 1.3; /* Espaciado entre líneas */
+    white-space: normal; 
+    line-height: 1.3;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Ocupar toda la altura de la barra */
+    height: 100%;
   }
   
   #brandBar .brand-wrap {
     padding: 0 8px;
-    height: 100%; /* Ocupar toda la altura */
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  
-  /* ====== AJUSTES PARA MÓVIL CON BARRA ALTA ====== */
+
   #titleBar { 
-    top: 72px !important; /* Empezar justo después de la barra superior (72px) */
-    height: 50px !important; /* Altura de la barra de título */
-    display: block !important; /* Asegurar que sea visible */
-    z-index: 9999; /* Asegurar que esté por encima */
+    top: 72px !important; 
+    height: 50px !important;
+    display: block !important; 
+    z-index: 9999; 
   }
   
   .mobile #titleBar { 
-    top: 72px !important; /* Empezar justo después de la barra superior */
-    height: 50px !important; /* Altura de la barra de título */
-    display: block !important; /* Asegurar que sea visible */
-    z-index: 9999; /* Asegurar que esté por encima */
+    top: 72px !important;
+    height: 50px !important; 
+    display: block !important;
+    z-index: 9999;
   }
   
   .mobile #titleBar .sceneName {
-    line-height: 40px; /* Ajustar altura del texto para la barra de 50px */
-    font-size: 16px; /* Texto más grande y legible */
+    line-height: 40px;
+    font-size: 16px; 
     font-weight: 600;
   }
   
   #sceneList { 
-    padding-top: calc(50px + 72px); /* Ajustar padding: altura titleBar (50px) + altura brandBar (72px) = 122px */
+    padding-top: calc(50px + 72px) !important; 
+  }
+  
+  .mobile #sceneList {
+    padding-top: calc(50px + 72px) !important; 
   }
   
   #fullscreenToggle,
   #autorotateToggle,
   #sceneListToggle,
   #aboutToggle { 
-    top: 72px !important; /* Ajustar posición de botones */
+    top: 72px !important; 
   }
 }
 
-/* Para pantallas muy pequeñas */
 @media (max-width: 480px) {
   #brandBar .brand-title {
-    font-size: 13px; /* Ligeramente más pequeño pero legible */
+    font-size: 13px; 
     line-height: 1.2;
   }
   
   .mobile #titleBar .sceneName {
-    font-size: 15px; /* Texto ligeramente más pequeño en pantallas muy pequeñas */
-    line-height: 40px; /* Mantener consistencia con la altura de la barra */
+    font-size: 15px; 
+    line-height: 40px; 
   }
 }
 
-
-/* ====== POSICIONES BASE (DESKTOP) ====== */
-/* Solo aplicar estos estilos en desktop */
 @media (min-width: 769px) {
   #titleBar { top: 36px; }
   .mobile #titleBar { top: 36px; }
@@ -1085,7 +1072,6 @@ body.view-control-buttons .viewControlButton {
   #sceneListToggle { top: 36px; }
 }
 
-/* ===== Botón Info ===== */
 #aboutToggle {
   position: absolute;
   top: 36px;
@@ -1098,12 +1084,11 @@ body.fullscreen-enabled #aboutToggle { right: 40px; }
 .mobile #aboutToggle { 
   width: 50px; 
   height: 50px; 
-  right: 0px; /* Sin espacio extra en móvil */
+  right: 0px; 
 }
 #aboutToggle .icon { position: absolute; top: 5px; right: 5px; width: 30px; height: 30px; }
 .mobile #aboutToggle .icon { top: 10px; right: 10px; }
 
-/* ===== Panel Info ===== */
 #aboutPanel {
   position: absolute;
   top: 76px;            
@@ -1121,42 +1106,35 @@ body.fullscreen-enabled #aboutToggle { right: 40px; }
 #aboutPanel .about-title { font-weight: 700; margin-bottom: 6px; }
 #aboutPanel .about-body { font-size: 14px; line-height: 1.35; }
 #aboutPanel.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
-/* ====== OCULTAR BOTÓN AUTOROTATE ====== */
 #autorotateToggle { 
   display: none !important; 
 }
 
-/* Asegurar que esté oculto en todos los casos */
 .mobile #autorotateToggle,
 body.fullscreen-enabled #autorotateToggle,
 body.fullscreen-enabled.mobile #autorotateToggle {
   display: none !important;
 }
 
-/* ====== FIX: Info sin descripción (mostrar solo el título como chip) ====== */
 .info-hotspot.no-text .info-hotspot-header {
-  /* que deje de ser un círculo fijo */
   width: auto !important;
   height: auto !important;
   border-radius: 12px !important;
-  background: rgba(191, 9, 47, 0.95); /* #BF092F */
+  background: rgba(191, 9, 47, 0.95); 
   color: #fff;
   padding: 6px 10px !important;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* Asegurar que los hotspots sin texto también estén por encima */
   z-index: 10001 !important;
-  cursor: default;                /* no clic en desktop */
-  transition: none !important;    /* evita animaciones de hover/visible */
+  cursor: default;                
+  transition: none !important;   
   box-shadow: 0 2px 4px rgba(0,0,0,.2);
 }
 
-/* oculta el ícono "i" y el botón cerrar */
 .info-hotspot.no-text .info-hotspot-icon-wrapper { display: none !important; }
 .info-hotspot.no-text .info-hotspot-close-wrapper { display: none !important; }
 
-/* el contenedor del título debe ser visible y ocupar su ancho */
 .info-hotspot.no-text .info-hotspot-title-wrapper {
   position: static !important;
   width: auto !important;
@@ -1166,28 +1144,23 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   transition: none !important;
 }
 
-/* el título en una sola línea */
 .info-hotspot.no-text .info-hotspot-title {
   display: inline !important;
   font-weight: 700;
   white-space: nowrap;
 }
 
-/* desactiva los efectos de hover de escritorio en no-text */
 .desktop.no-touch .info-hotspot.no-text .info-hotspot-header:hover {
   width: auto !important;
   border-radius: 12px !important;
 }
 
-/* por si algún estilo de "visible" intenta abrirlo,
-   mantenemos la caja compacta en no-text */
 .desktop .info-hotspot.no-text.visible .info-hotspot-header,
 .desktop.no-touch .info-hotspot.no-text.visible .info-hotspot-header:hover {
   width: auto !important;
   border-radius: 12px !important;
 }
 
-/* ====== PEEK PARA MÓVIL (hotspots sin descripción) ====== */
 .info-hotspot-peek {
   position: fixed;
   top: 50%;
@@ -1220,7 +1193,6 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   text-overflow: ellipsis;
 }
 
-/* ====== MEJORAS PARA MÓVIL ====== */
 @media (max-width: 768px) {
   .info-hotspot-modal {
     z-index: 12000 !important;
@@ -1241,7 +1213,6 @@ body.fullscreen-enabled.mobile #autorotateToggle {
   }
 }
 
-/* ====== FIX PARA DETECCIÓN DE TÁCTIL ====== */
 .mobile .info-hotspot-modal {
   display: block;
 }
@@ -1249,6 +1220,3 @@ body.fullscreen-enabled.mobile #autorotateToggle {
 .desktop .info-hotspot-modal {
   display: none;
 }
-
-
-
