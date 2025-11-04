@@ -1623,8 +1623,10 @@ var APP_DATA = {
           + "<b>Nombre del funcionario</b><br>"
           + "<b>Blanca Barahona Barahona</b><br><br>"
           + "<b>Contacto</b>:<br>"
-          + "blanca.baraboha.barahona@una.cr<br>"
+          + "biliberia@una.cr<br>"
           + "2562-6263<br>"
+          + "2562-6265<br>"
+          + "2562-6266<br>"
           + "[Instagram](https://www.instagram.com/biblio_rose_marie_una?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==)"
         }
       ]

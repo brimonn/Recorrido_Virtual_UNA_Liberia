@@ -170,8 +170,9 @@
   }
 
   scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-    if (el) {
+    var elements = document.querySelectorAll('#sceneList .scene[data-id="' + scene.data.id + '"]');
+    for (var i = 0; i < elements.length; i++) {
+      var el = elements[i];
       el.addEventListener('click', function() {
         switchScene(scene);
         if (document.body.classList.contains('mobile')) {
